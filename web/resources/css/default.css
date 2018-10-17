@@ -1,0 +1,1067 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Source+Sans+Pro:400,600,700|Raleway:400,900,700|PT+Serif:400,700|Titillium+Web:400,700,900|Amatic+SC:400,700|Alegreya:400,700&subset=latin,latin-ext);
+
+body {
+
+    font-family: 'Lato', sans-serif;
+    background-color: #3b3b3b;
+    /* Background pattern from subtlepatterns.com */
+    background-image: url("../../IMG/debut_dark.png");
+    font-size: 100%;
+    
+    color: #cfc48e;  
+    margin: 0;
+    
+    
+}
+
+p::selection, h2::selection
+{
+    background: #DEDEDE;
+}
+
+.top h1, .top h2 {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size:  5em;
+    letter-spacing: 0.3em;
+    color: #fff6af;
+    margin: 0px;
+    padding: 0px;
+    text-shadow:
+		5px 5px 10px #292929,
+		-5px 5px 10px #292929,
+		-5px -5px 10px #292929,
+		5px -5px 10px #292929;   
+}
+
+
+
+.top h2
+{   
+    margin-top: 5px;
+    font-size:  3em;
+}
+
+a:link, a:visited 
+{
+    color: #cfc48e;   
+    text-decoration: none;
+}
+
+a:link:hover, a:visited:hover  
+{
+   color: #cfc48e;     
+   
+}
+
+.loginButtonBox a, .currnetClientBox a
+{
+    display: block;
+    padding: 5px;
+    transition-property: color, background-image;
+    transition-duration: 0.5s, 0.4s;
+}
+
+.loginButtonBox a:hover, .currnetClientBox a:hover
+{
+    background-image: url("../../IMG/debut_dark_darker.png"); 
+    color: #efe6af;   
+}
+
+.loginButtonBox, .currnetClientBox
+{
+    width: 100px;
+    
+    
+    text-align:center;
+    border-radius: 5px;
+    position: absolute;
+    left: 70%;
+    top: 0px;
+    margin-top: 0;
+    
+    z-index: 100;
+    -moz-transition-property: color, background-image;
+    -moz-transition-duration: 0.5s, 0.4s;
+    
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 9px 2px rgba(28,28,28,0.5);
+    -moz-box-shadow: 0px 0px 9px 2px rgba(28,28,28,0.5);
+    box-shadow: 0px 0px 9px 2px rgba(28,28,28,0.5);
+}
+
+.currnetClientBox
+{
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 200px;
+    height: 50px;
+}
+
+
+
+.navigation
+{
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.navigation ol
+{
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;
+    font-size: 1.4em;
+}
+
+.navigation ol a
+{
+    text-decoration: none;
+    color: #cfc48e;
+    display: block;
+    width: 200px;
+    border: 1px solid rgba(28,28,28, 0.7);
+    border-radius: 10px;
+    background-image: url("../../IMG/debut_dark_lighter.png");
+    padding: 6px;
+    
+    -moz-transition-property: color, background-image;
+    -moz-transition-duration: 0.5s, 0.4s;
+    transition-property: color, background-image;
+    transition-duration: 0.5s, 0.4s;
+    
+    -webkit-box-shadow: 0px 0px 9px 2px rgba(28,28,28,0.7);
+    -moz-box-shadow: 0px 0px 9px 2px rgba(28,28,28,0.7);
+    box-shadow: 0px 0px 9px 2px rgba(28,28,28,0.7);
+    
+}
+
+.navigation ol a:hover
+{
+    background-image: url("../../IMG/debut_dark_darker.png"); 
+    color: #efe6af;   
+}
+
+.navigation ol > li:first-child
+{
+    margin: 0;
+}
+
+.navigation ol > li
+{
+    margin-left: 10px;
+    float: left;
+}
+
+.chooseCity, .choosePayment, #chooseingOptionForPersonForm
+{
+    width: 250px;
+    border: 1px solid rgba(28,28,28, 0.7);
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 5px;
+    color: #cfc48e;
+    cursor: pointer;
+    outline:none;
+    -webkit-box-shadow: 0px 0px 9px 2px rgba(28,28,28,0.7);
+    -moz-box-shadow: 0px 0px 9px 2px rgba(28,28,28,0.7);
+    box-shadow: 0px 0px 9px 2px rgba(28,28,28,0.7);
+    
+    background-image: url("../../IMG/debut_dark_lighter.png");
+}
+
+
+#chooseingOptionForPersonForm
+{
+    width: auto;
+}
+
+.chooseCity:focus, #chooseingOptionForPersonForm:focus
+{    
+    background-color: #3b3b3b;    
+    outline: none;
+}
+
+.today
+{  
+    color: #cfc48e;
+}
+
+.today h2, .cinemaInfoSection h2, .reservationContainer h2, .loginContainer h2,
+.workerMenuSection h2, .chooseLocationContainer h2, .reservationInfoContainer h2,
+.reservationOrBuyingContainer h2
+{
+    font-family: 'Titillium Web', sans-serif;
+    padding-top: 5px;
+    color: #ddd48d; 
+    font-size: 2.2em;
+    border-bottom: 1px solid #8d8d8d;
+    text-align: left;
+    text-indent: 0.5em;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-bottom: 10px;    
+}
+
+.chooseLocationContainer h2
+{
+    text-align: center;
+    text-indent: 0;
+}
+
+.locationToChoosen
+{
+    width: 85%;
+    min-height: 400px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.6em;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.locationToChoosen ul
+{
+    list-style-type: none;
+    letter-spacing: 1px;
+}
+
+.locationToChoosen ul > li:before
+{
+    content: "✓";
+    margin-right: 15px;
+    
+}
+
+.locationToChoosen ul > li
+{
+    margin-bottom: 5px;
+}
+
+
+.locationToChoosen a
+{
+    transition-property: color;
+    transition-duration: 0.4s;
+}
+
+
+.locationToChoosen a:hover
+{
+    color: #fff7bf;
+}
+
+
+
+.repertoireContainer
+{
+    padding:0 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+}
+
+.repertoireDataTable
+{
+    border-bottom: 1px solid #7c7c7c;
+    width: 100%;
+    border-spacing: 0;
+    padding-bottom: 5px;    
+}
+
+.repertoireDataTableHeader th
+{   
+    margin: 0;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 0.8em;     
+}
+
+.repertoireDataTableMovieTitle
+{
+    width: 400px;
+    text-align: left;
+}
+
+.repertoireDataTableBody td
+{
+    border-top: 1px solid #5a5a5a;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0;
+}
+
+.repertoireDataTableBody a
+{
+    font-weight: bold;
+    transition-property: color, text-decoration;
+    transition-duration: 0.3s, 0.3s;
+}
+
+.repertoireDataTableBody a:hover
+{
+    color: white;
+    text-decoration: underline;
+}
+
+.repertoireContainer p
+{
+    color: #8d8d8d;
+    font-size: 0.9em;
+    margin-left: 1%;
+}
+
+.socialWebs
+{
+    color: white;
+     margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    padding: 10px;
+    margin-top: 70px;    
+}
+
+.socialButtons
+{
+    width: 90px;
+    height: 100px;
+    float: left;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 4em;
+    border-radius: 5px;
+    padding: 2px;
+    padding-top: 12px;
+    transition-property: background-color, color;
+    transition-duration: 0.4s, 0.7s;
+    
+    -webkit-box-shadow: 0px 0px 9px 5px rgba(207,196,142,0.1);
+    -moz-box-shadow: 0px 0px 9px 5px rgba(207,196,142,0.1);
+    box-shadow: 0px 0px 9px 5px rgba(207,196,142,0.1);   
+}
+
+.socialWebs >.socialButtons:first-child
+{
+    margin: 0;
+}
+
+.socialFbButton:hover
+{
+    background-color: #4668b3;
+    color: white;
+}
+
+.socialTwButton:hover
+{
+    background-color: #3095d3;
+    color: white;
+}
+
+.socialGpButton:hover
+{
+    background-color: #d95333;
+    color: white;
+}
+
+.socialYtButton:hover
+{
+    background-color: #b94348;
+    color: white;   
+}
+
+.clearboth
+{
+    clear: both;
+}
+
+.contactInfo
+{
+    float:left;
+    width: 25%;
+    padding-top: 0;
+    margin-left: 2%;    
+}
+
+.contactInfo h2
+{   
+    margin-top: 0;
+}
+
+.contactInfo p
+{
+    font-size: 1.3em;
+    text-align: center;      
+    margin: 0;   
+}
+
+.contactInfoValue
+{
+    margin-bottom: 10px !important;
+    letter-spacing: 2px;
+    padding-top: 2px;
+    border-bottom: 1px dashed #5a5a5a;
+    padding-bottom: 5px;
+}
+
+.cinemaInfo
+{
+    padding: 10px;
+    padding-top: 0;
+    text-align: justify;
+    width: 70%;
+    float: right;   
+}
+
+.cinemaInfo h2, .contactInfo h2
+{
+    font-size: 1.5em;
+}
+
+.cinemaInfo p
+{
+    padding: 0 10px;
+    font-family: 'PT Serif', serif; 
+    font-size: 1.1em;
+    text-indent: 1.5em;
+    line-height: 1.5em;    
+}
+
+.cinemaInfo ul
+{
+    list-style-type: none;
+    padding: 0;   
+    font-size: 1.1em; 
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    margin-left: 10px;
+}
+
+
+
+.cinemaInfoPhotoConteiner
+{
+    width: 500px;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cinemaInfoPhoto
+{
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.9);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.9);
+    box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.9);
+}
+
+.reservationContainer h2
+{
+    font-size: 1.8em;
+}
+
+.reservationContainer h3
+{
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.reservationStepsContainer
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  
+    
+}
+
+.reservationStep
+{
+    color: #6c6c6c;
+    display: inline-block;
+    width: 215px;
+    height: 40px;
+    padding: 6px;
+    padding-bottom: 4px;
+    border: 1px solid #6c6c6c;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: 11px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.7);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.7);
+    box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.7);
+}
+
+.reservationStepsContainer > .reservationStep:first-child
+{
+    margin: 0;
+}
+
+.currentReservationStep
+{
+    color: #cfc48e;
+    border-color: #cfc48e;
+    background-image: url("../../IMG/debut_dark_lighter.png"); 
+    -webkit-box-shadow: 0px 0px 9px 5px rgba(207,196,142,0.1);
+    -moz-box-shadow: 0px 0px 9px 5px rgba(207,196,142,0.1);
+    box-shadow: 0px 0px 9px 5px rgba(207,196,142,0.1);  
+}
+
+.finishedReservationStep
+{
+   color: #9c915b;
+    background-image: url("../../IMG/debut_dark_lighter.png"); 
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.7);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.7);
+    box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.7); 
+}
+
+.hallContainer, .reservationPlaceFormContainer, .choosenPlacesContainer
+{  
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+    padding-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+    box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+}
+
+
+.choosenPlacesContainer
+{
+    margin-top: 70px;
+     text-align: center;
+}
+
+
+.hallScreen
+{
+    border: 2px solid gray;
+    width: 70%;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    letter-spacing: 5px;
+    
+    border-radius: 5px;
+}
+
+.hallPlaceContainer
+{
+    
+    margin-top: 50px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.hallRow
+{
+    padding: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.hallPlace, .hallRowName
+{
+    display: inline-block;
+    font-family: 'PT Serif', serif;
+    font-size: 1.2em;
+    width: 20px;
+    margin: 2px;
+    padding: 5px;
+    border: 1px solid #8a8a8a;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    transition-property: background-color, color;
+    transition-duration: 0.4s, 0.5s;
+}
+
+.hallRowName
+{
+   border-color: #5b5b5b;
+   color: #8a8a8a;
+   margin-left: 8px;
+   margin-right: 8px;
+   cursor: default;
+}
+
+.hallPlace:hover
+{
+    color: #ffff00; 
+    background-color: #666662;
+}
+
+.hallPlaceChoosen
+{
+    background-color: #339966;
+    color: white;
+    
+}
+
+ .hallPlaceChoosen:hover
+ {
+     background-color: #228855;
+ }
+ 
+ .hallPlaceUnavilable
+ {
+     color: white;
+     background-color: #9999CC;
+ }
+ 
+ .hallPlaceUnavilable:hover
+ {
+     color: white; 
+     background-color: #9999CC;
+ }
+
+
+.reservationPlaceFormContainer
+{
+    margin-top: 30px; 
+    text-align: center;
+    
+}
+
+.reservationPlaceFormContainer p
+{
+    width: 100px;
+   
+    text-align: center;
+    
+}
+
+.choosingOptionForPersonLabel
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reservationIntputsContainer
+{
+    
+    width: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    
+}
+
+input[type=text],
+input[type=password]
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    margin-top: 8px;
+    border-radius: 10px;
+    width: 80px;
+    height: 20px;
+    padding: 7px;
+    background-color:  #C0C0C0;
+    border: 2px solid gray;
+    text-align: center;
+    font-size: 1.8em;
+    outline: none;
+        -webkit-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+    box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+}
+
+input[type=submit]
+{
+    display: block;
+    
+    font-family: 'Lato', sans-serif;
+    
+    margin-top: 20px;
+    
+    height: 50px;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.6em;
+    border-radius: 10px;
+    border: 2px solid green;
+    background-color: #009900;
+    color: white;
+    
+    cursor: pointer;
+    outline: none;
+    transition-property: background-color, color;
+    transition-duration: 0.4s, 0.4s;
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+    box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+}
+
+
+.reservationOrBuyingButtonsContainer
+{
+    text-align: center;
+}
+
+
+.reservationOrBuyingContainer h3, .reservationOrBuyingContainer h4
+{
+    text-align: center;
+    font-size: 1.9em;
+}
+
+.infoAboutAccount
+{
+    color: #8d8d8d;
+    font-size: 0.9em;
+    margin-left: 1%;
+    margin-top: 50px;
+}
+
+.reservationOrBuyingContainer input[type=submit]
+{
+    color: #cfc48e;
+    display: inline-block;
+    width: 200px;
+    border: 2px solid rgba(28,28,28, 0.7);
+    border-radius: 10px;
+    
+    background-image: url("../../IMG/debut_dark.png"); 
+    padding: 6px;
+    margin-right: 40px;
+    
+    -moz-transition-property: color, background-image;
+    -moz-transition-duration: 0.5s, 0.4s;
+    transition-property: color, background-image, box-shadow;
+    transition-duration: 0.5s, 0.4s, 0.5s;
+    
+    -webkit-box-shadow: 0px 0px 9px 2px rgba(207,196,142,0.4);
+    -moz-box-shadow: 0px 0px 9px 2px rgba(207,196,142,0.4);
+    box-shadow: 0px 0px 9px 2px rgba(207,196,142,0.4);
+}
+
+.reservationOrBuyingContainer input[type=submit]:hover
+{
+    background-image: url("../../IMG/debut_dark_lighter.png");
+    color: #efe6af;
+    
+    box-shadow: 0px 0px 9px 2px rgba(255,255,255, 0.5);
+}
+
+
+.nextButton
+{
+    float: right;
+    font-family: 'Lato', sans-serif;
+    
+    margin-top: 20px;
+    width: 90px;
+    height: 50px;
+    
+    text-align: center;
+    
+    border-radius: 10px;
+    border: 2px solid green;
+    background-color: #009900;
+    color: white;
+    
+    cursor: pointer;
+    outline: none;
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+    box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+}
+
+.nextButton:hover
+{
+    background-color: #11aa11;
+}
+
+
+
+
+.nextButtonLink, .nextButton a, .nextButton a:visited, .nextButton a:hover
+{
+    display: block;
+    color: white;
+    font-size: 1.6em;
+    height:30px;
+    padding: 10px;
+    transition-property:  color;
+    transition-duration: 0.4s;
+}
+
+
+
+
+
+.previousButton
+{
+    margin-top: 20px;
+    float: left;
+    background: inherit;
+    height: 50px;
+    width: 90px;
+    color: #a7a7a7;
+    border: 2px solid #3d3d3d;
+    border-radius: 10px;
+    
+    cursor: pointer;
+  
+    transition-property: background-color;
+    transition-duration: 0.4s;
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+    box-shadow: 0px 0px 9px 3px rgba(18,18,18,0.5);
+}
+
+.previousButton a, previousButton a:visited
+{
+    color: #a7a7a7;
+}
+
+.previousButton a:hover
+{
+    color: white;
+}
+
+.previousButton:hover
+{
+   background-color: #6b6b6b;
+   
+}
+
+.prevButtonLink
+{
+   color: #a7a7a7; 
+}
+
+.prevButtonLink:link, .prevButtonLink:link:visited
+{
+    display: block;
+    color: #a7a7a7;
+    font-size: 1.4em;
+    height:30px;
+    padding: 10px;
+    transition-property:  color;
+    transition-duration: 0.4s;
+}
+
+.prevButtonLink:link:hover, .prevButtonLink:link:visited:hover
+{
+    color: white;
+}
+
+
+input[type=submit]:hover
+{
+    background-color: #11aa11;
+}
+
+
+.countTicket
+{
+    font-size: 2em;
+    letter-spacing: 3px;
+    display: block;
+    margin-top: 15px;
+}
+
+.reservationContainer > p
+{
+    text-align: center;
+    font-size: 1.9em;
+    letter-spacing: 2px;
+}
+
+
+.reservationInfoContainer
+{
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.reservationInfoContainer h2
+{
+    text-align: center;
+    text-indent: 0;
+}
+
+
+
+.infoAboutReservationNr
+{
+    font-size: 1.5em;
+}
+
+.reservationIntputsUserContainer p
+{
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reservationFName, #reservationName, #reservationEmail, 
+.loginContainer input[type=text],
+.loginContainer input[type=password]
+{
+    width: 300px;
+    height: 30px;
+    text-transform: none;
+}
+
+#reservationFName:focus, #reservationName:focus, #reservationEmail:focus,
+.loginContainer input[type=text]:focus,
+.loginContainer input[type=password]:focus
+{
+  background-color: #cfc48e;
+}
+
+input::-webkit-input-placeholder
+{
+    color: #7c7c7c;
+}
+
+.reservationButton
+{
+    width: 200px;
+    float: right;
+}
+
+.goToIndex
+{
+    font-size: 1.5em;
+    display:block;
+    width: 275px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.goToIndex a:hover
+{
+    color: #efe6af;
+}
+
+
+
+
+
+
+.loginContainer p
+{
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+
+
+.loginContainer a:hover
+{
+    color: #efe6af;
+}
+
+.loginContainer input[type=submit]
+{
+    font-size:inherit;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+.loginContainer input[type=text],
+.loginContainer input[type=password]
+{
+    font-size: 1.2em;
+}
+
+
+.daysIconsContainer
+{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+.dayIcon
+{
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 25px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    transition-property: background-color, color;
+    transition-duration: 0.4s, 0.4s;
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(28,28,28,0.5);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(28,28,28,0.5);
+    box-shadow: 0px 0px 9px 3px rgba(28,28,28,0.5);
+}
+
+.daysIconsContainer > .dayIcon:first-child
+{
+    margin: 0;
+}
+
+.dayIcon:hover
+{
+    color: #cccc33;
+    font-weight: bold;
+    background-color: #5f5f5f;
+}
+
+.currentDayIcon
+{
+    background-color: #6d6d6d;
+    font-weight: bold;
+}
+
+.choosenPlacesTable
+{
+    width: 70%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+     border-spacing: 0;
+     border-bottom: 1px solid gray;
+     text-align: center;     
+}
+
+
+.choosenPlacesTable th
+{
+    border-bottom: 1px solid gray;
+    font-size: 20px;
+    padding-bottom: 6px;
+   
+}
+
+.choosenPlacesTable td
+{
+    padding: 10px;
+}

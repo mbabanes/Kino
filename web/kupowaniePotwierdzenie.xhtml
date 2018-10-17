@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./szablon.xhtml">
+
+            <ui:define name="top">
+                #Kielce
+            </ui:define>
+            <ui:define name="navigation" />
+           
+                     
+           
+            <ui:define name="reservationSteps">
+                  <div class="reservationStepsContainer">
+                        <div class="reservationStep finishedReservationStep">1. Wybór miejsca</div>
+                        <div class="reservationStep currentReservationStep">2. Potwierdzenie</div>
+                        <div class="reservationStep">3. Dane osobowe</div>
+                        <div class="reservationStep">4. Podsumowanie</div>
+                        <div class="clearboth"></div>
+                    </div>
+            </ui:define>
+            <ui:define name="content">
+               
+                <section class="reservationContainer">
+                    <h2>Kupowanie - Wybrane miejsca</h2>
+                    <h3>#{biletBean.tytulFilmu}</h3>
+                    <p>#{biletBean.data} #{biletBean.godzina}</p>
+
+                    <div class="choosenPlacesContainer">
+                         <table class="choosenPlacesTable">
+                                <tr>
+                                    <th>Rząd</th><th>Miejsce</th><th>Rodzaj biletu</th>
+                                </tr>
+                             <ui:repeat value="#{biletBean.wybraneMiejscaList}" var="wybraneMiejsca"> 
+                               
+                                <tr>
+                                    <td>#{wybraneMiejsca.rzad}</td><td>#{wybraneMiejsca.miejsceWRzedzie}</td><td>#{wybraneMiejsca.rodzajBiletu}</td>
+                                </tr>
+            
+                            </ui:repeat>
+                            </table>
+                            <span class="countTicket">Ilość: #{biletBean.ile}</span>
+                            <span class="countTicket">Koszt: #{biletBean.koszt}0 zł</span>
+                            
+                        
+                        <div class="buttonsReservationContainer">   
+                            
+                            <div class="previousButton">
+                                <a href="kupowanieWyborMiejsc.xhtml" class="prevButtonLink">Powrót</a>
+                            </div>
+                            
+                            
+                            <div class="nextButton">
+                                <h:outputLink value="#{biletBean.sprawdzCzyZalogowany(loginBean.currentKlient.login)}" class="nextButtonLink">Dalej</h:outputLink>
+                               
+                            </div>
+                            
+                            
+                            <div class="clearboth"></div>
+                            
+                        </div>
+                    </div> 
+                    
+                    
+                    
+                    
+                </section>
+                      
+            </ui:define>
+
+            
+            
+            
+            
+            
+        </ui:composition>
+
+    </body>
+</html>

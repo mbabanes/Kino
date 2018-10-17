@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../szablon.xhtml">
+
+            <ui:define name="css">
+                <h:outputStylesheet name="/css/workerCss.css"/>
+            </ui:define>
+
+            <ui:define name="top">
+                #Kielce
+            </ui:define>
+
+            <ui:define name="navigation"></ui:define>
+            
+            
+            <ui:define name="loginButton">
+                 <div class="loginButtonBox">
+                    <a href="../logowanie.xhtml">Zaloguj się</a>
+                </div>
+            </ui:define>
+
+            <ui:define name="content">
+                <section class="today">
+                    <h2>Wystaw bilet - repertuar</h2>
+                    <div class="repertoireContainer">
+                        <table class="repertoireDataTable">
+                            <thead class="repertoireDataTableHeader">
+                                <th  class="repertoireDataTableMovieTitle">Filmy</th><th>Gatunek</th><th>do południa</th>
+                                <th>po południu</th><th>wieczorem</th>
+                            </thead>
+                            
+                            <tbody class="repertoireDataTableBody">
+                                <tr>
+                                    <td>Władca Pierścieni: Drużyna pierścienia</td>
+                                    <td>Fantasy</td>
+                                    <td><a href="wybierzMiejsce.xhtml">10:00</a> 12:00</td>
+                                    <td>13:00</td>
+                                    <td>18:00</td>
+                                </tr>
+                                    <tr>
+                                    <td>Władca Pierścieni: Dwie wieże</td>
+                                    <td>Fantasy</td>
+                                    <td>10:00 12:00</td>
+                                    <td>13:00</td>
+                                    <td>18:00</td>
+                                </tr>
+                                    <tr>
+                                    <td>Władca Pierścieni: Powrtót króla</td>
+                                    <td>Fantasy</td>
+                                    <td>10:00 12:00</td>
+                                    <td>13:00</td>
+                                    <td>18:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Kapitan Ameryka: wojna bohaterów  &#8260; napisy  &#8260;  3D</td>
+                                    <td>Fantasy</td>
+                                    <td>10:00 12:00</td>
+                                    <td>13:00</td>
+                                    <td>18:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

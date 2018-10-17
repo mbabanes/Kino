@@ -1,0 +1,7 @@
+font-family: 'Lato', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'Titillium Web', sans-serif;
+font-family: 'Amatic SC', cursive;
+font-family: 'Alegreya', serif;

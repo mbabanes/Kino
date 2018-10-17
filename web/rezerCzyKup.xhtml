@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./szablon.xhtml">
+
+            <ui:define name="top">
+                ##{lokalizacjaBean.lokalizacja.miasto}
+            </ui:define>
+
+          
+
+            <ui:define name="reservationSteps">
+                
+            </ui:define>
+
+            <ui:define name="content">
+                <div class="reservationOrBuyingContainer">
+                    <h2>Wybierz jedna z opcji</h2>
+                    
+                    <h3>#{wybranySeansBean.tytulFilmu}</h3>
+                    <h4>#{seansBean.currentDayToShow}</h4>
+                    
+                    <div class="reservationOrBuyingButtonsContainer">
+                        <h:form>
+                            <p>
+                                <h:commandButton action="#{rezerwacjeBean.przejdzDoWyboruMiejsc(wybranySeansBean.idSeans, wybranySeansBean.tytulFilmu, wybranySeansBean.godzina)}" value="Rezerwacja" />
+                                
+                                <h:commandButton action="#{biletBean.przejdzDoWyboruMiejsc(wybranySeansBean.idSeans, wybranySeansBean.tytulFilmu, wybranySeansBean.godzina)}" value="Kup bilet" />
+                            </p>
+                        </h:form>
+                    </div>
+                    
+                    
+                    <p class="infoAboutAccount"><i class="demo-icon icon-info-circled-alt"></i>Kupno biletu wymaga posiadania konta w serwisie.</p>
+                    
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

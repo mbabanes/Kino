@@ -1,0 +1,79 @@
+
+#top 
+{
+    position: relative;
+    margin-top: 20px;
+   
+    padding: 15px 0;
+    
+}
+
+
+
+#left {
+    float: left;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+#right {
+    float: right;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+.center_content 
+{
+    min-height: 700px;
+    background-image: url("../../IMG/debut_dark_lighter.png");
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 0 15px;
+    padding-bottom: 35px;
+   
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 9px 5px rgba(38,38,38,0.8);
+    -moz-box-shadow: 0px 0px 9px 5px rgba(38,38,38,0.8);
+    box-shadow: 0px 0px 9px 5px rgba(38,38,38,0.8);
+    
+    /*-webkit-box-shadow: 0px 0px 9px 5px rgba(207,196,142,0.2);
+    -moz-box-shadow: 0px 0px 9px 5px rgba(207,196,142,0.2);
+    box-shadow: 0px 0px 9px 5px rgba(207,196,142,0.2);*/
+}
+
+
+
+#top a:link, #top a:visited {
+    color: white;
+    font-weight : bold;
+    text-decoration: none;
+}
+
+#top a:link:hover, #top a:visited:hover  {
+    color: black;
+    font-weight : bold;
+    text-decoration : underline;
+}
+
+
+#footer
+{
+    width: 100%;
+    margin-top: 3%;
+    height: 250px;
+    text-align: center;
+    padding: 0;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background-image: url("../../IMG/debut_dark_darker.png");
+    color: #8d8d8d;
+    
+    
+    -webkit-box-shadow: 0px -6px 9px 5px rgba(38,38,38,0.5);
+    -moz-box-shadow: 0px -6px 9px 5px rgba(38,38,38,0.5);
+    box-shadow: 0px -6px 9px 5px rgba(38,38,38,0.5);
+}

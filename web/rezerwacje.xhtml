@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    
+        
+      
+    
+    <body>
+
+        <ui:composition template="szablon.xhtml">
+            
+                
+                       
+            <ui:define name="top">
+                ##{lokalizacjaBean.lokalizacja.miasto}
+            </ui:define>
+            <ui:define name="navigation" />
+           
+            
+            <ui:define name="reservationSteps">
+                
+                <input type="hidden" id="iloscRzedow" value="#{rezerwacjeBean.iloscRzedow}" />
+                <input type="hidden" id="iloscMiejscWRzedzie" value="#{rezerwacjeBean.iloscMiejscWRzedzie}" />
+                
+                #{rezerwacjeBean.setKlientId( loginBean.currentKlient.klient )}
+               
+                <h:outputScript name="js/reservation.js" target="head" />
+                  <div class="reservationStepsContainer">
+                        <div class="reservationStep currentReservationStep">1. Wybór miejsca</div>
+                        <div class="reservationStep">2. Potwierdzenie</div>
+                        <div class="reservationStep">3. Dane osobowe</div>
+                        <div class="reservationStep">4. Podsumowanie</div>
+                        <div class="clearboth"></div>
+                    </div>
+            </ui:define>
+            <ui:define name="content">
+               
+                <section class="reservationContainer">
+                    <h2>Rezerwacja - wybór miejsc</h2>
+                    <h3>#{rezerwacjeBean.tytulFilmu}</h3>
+                    <p>#{rezerwacjeBean.data} #{rezerwacjeBean.godzina}</p>
+                    <div class="hallContainer">
+                        <div class="hallScreen">EKRAN</div>
+                        <div class="hallPlaceContainer">
+                        </div>    
+                    </div>
+                    
+                    <div class="reservationPlaceFormContainer">
+                        <span class="countTicket"></span>
+                        <form id="reservationPlaceForm" method="POST" action="rezerwacjePotwier.xhtml">
+                           
+                            
+                            <div class="buttonsReservationContainer">
+                               
+                                <input type="submit" value="Dalej" class="nextButton" />
+                                <div class="clearboth"></div>
+                            </div>
+                        </form>
+                    </div> 
+                  
+                </section>
+                 
+                
+                <h:outputScript target="body">
+                    renderPlaces(#{rezerwacjeBean.iloscRzedow}, #{rezerwacjeBean.iloscMiejscWRzedzie});
+                     $('.reservationPlaceFormContainer').hide();
+                     
+                    <ui:repeat value="#{rezerwacjeBean.miejscaZajete}" var="zajeteMiejsca">
+                    
+                        odczepOnClick(#{zajeteMiejsca.nrMiejsca}, '#{zajeteMiejsca.nrrzedu}');
+                    
+                    </ui:repeat>
+                
+                </h:outputScript>
+               
+                <h:outputScript target="body" rendered="#{rezerwacjeBean.wybranoMiejsca}">
+                
+                   
+                    <ui:repeat value="#{rezerwacjeBean.wybraneMiejsca}" var="wybraneMiejsca">
+                    
+                        sprawdz(#{wybraneMiejsca.miejsceWRzedzie}, '#{wybraneMiejsca.rzad}', true, '#{wybraneMiejsca.rodzajBiletu}');
+                    </ui:repeat>
+                   
+                </h:outputScript>
+                
+            </ui:define>
+
+            
+            
+            
+            
+            
+        </ui:composition>
+
+    </body>
+</html>

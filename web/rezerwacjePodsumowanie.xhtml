@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="szablon.xhtml">
+
+            <ui:define name="top">
+                #Kielce
+            </ui:define>
+            <ui:define name="navigation" />
+           
+               
+           
+            <ui:define name="reservationSteps">
+                  <div class="reservationStepsContainer">
+                        <div class="reservationStep finishedReservationStep">1. Wybór miejsca</div>
+                        <div class="reservationStep finishedReservationStep">2. Potwierdzenie</div>
+                        <div class="reservationStep finishedReservationStep">3. Dane osobowe</div>
+                        <div class="reservationStep currentReservationStep">4. Podsumowanie</div>
+                        <div class="clearboth"></div>
+                    </div>
+            </ui:define>
+            <ui:define name="content">
+               
+                <section class="reservationContainer">
+                    <h2>Rezerwacja:</h2>
+                    <h3>#{rezerwacjeBean.tytulFilmu}</h3>
+                    <p>#{rezerwacjeBean.data} #{rezerwacjeBean.godzina}</p>
+
+                    <div class="reservationPlaceFormContainer">
+                         <span class="countTicket">Ilość: #{rezerwacjeBean.ile}</span> 
+                        <h:form id="reservationPlaceForm">
+                            <h:panelGroup layout="block"  rendered="#{loginBean.currentKlient.login}">
+                                #{rezerwacjeBean.setKlientId( loginBean.currentKlient.klient )}
+                            </h:panelGroup>
+                            #{rezerwacjeBean.setCzyJestWBazie(loginBean.currentKlient.login)}
+                            <table class="choosenPlacesTable">
+                                <tr>
+                                    <th>Rząd</th><th>Miejsce</th><th>Rodzaj biletu</th>
+                                </tr>
+                                 <ui:repeat value="#{rezerwacjeBean.wybraneMiejsca}" var="wybraneMiejsca"> 
+                               
+                                    <tr>
+                                        <td>#{wybraneMiejsca.rzad}</td><td>#{wybraneMiejsca.miejsceWRzedzie}</td><td>#{wybraneMiejsca.rodzajBiletu}</td>
+                                    </tr>
+            
+                                </ui:repeat>
+                            </table>
+                            
+                           
+                            
+                             <span class="countTicket">Dane osobowe:</span> 
+                            
+                           <div class="reservationIntputsUserContainer">
+                               <p><input type="text"  readonly="readonly" value="#{rezerwacjeBean.klientId.imie}" id="reservationFName" /></p>
+                               <p><input type="text" readonly="readonly"  value="#{rezerwacjeBean.klientId.nazwisko}"  id="reservationName" /></p>
+                               <p><input type="text" readonly="readonly" value="#{rezerwacjeBean.klientId.email}"  id="reservationEmail" /></p>
+                            </div>
+                            
+                            
+                            
+                            <div class="buttonsReservationContainer">
+                                
+                                <div class="previousButton">
+                                    <h:outputLink value="#{rezerwacjeBean.previousStep( loginBean.currentKlient.login )}" class="prevButtonLink">Powrót</h:outputLink>
+                               
+                            </div>
+                                <h:commandButton action="#{rezerwacjeBean.wykonajRezerwacje}" value="Rezerwuje" id="reservationButton" class="reservationButton" />
+                                
+                                <div class="clearboth"></div>
+                            </div>
+                        </h:form>
+                    </div> 
+                    
+                </section>
+                      
+            </ui:define>
+
+            
+            
+            
+            
+            
+        </ui:composition>
+
+    </body>
+</html>

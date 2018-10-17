@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="szablon.xhtml">
+
+            <ui:define name="top">
+                #Kielce
+            </ui:define>
+              <ui:define name="navigation" />
+                 
+            
+            <ui:define name="content">
+               
+                <section class="reservationInfoContainer">
+                    <h2>Dziękujemy za złożenie rezerwacji</h2>
+                    <p class="infoAboutReservationNr">Nr rezerwacji to: <strong>#{rezerwacjeBean.idRezerwacji}</strong></p>
+                    <p class="infoAboutReservationEmail">Na podany adres e-mail zostały wysłane szegółowe informacje.</p>
+
+                    <span class="goToIndex"><a href="index.xhtml">Przejdź do strony głównej</a></span>
+                    
+                    
+                </section>
+                      
+            </ui:define>
+
+            
+            
+            
+            
+            
+        </ui:composition>
+
+    </body>
+</html>

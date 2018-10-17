@@ -1,0 +1,73 @@
+.workerMenuPositions li
+{
+    margin-bottom: 10px;
+}
+
+
+.workerMenuPositions a
+{
+    color: #cfc48e; 
+    font-size: 1.6em;
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
+a:link:hover, a:visited:hover  
+{
+       
+   color: white;
+}
+
+.choosePayment
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.choosePayment:focus
+{
+    background-color: #3b3b3b;    
+    outline: none;
+}
+
+.selectPaymentContainer
+{
+    text-align: center;
+    width: 250px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.goToIndex
+{
+    width: 150px;
+}
+
+
+.addingFilmFormContainer input[type=text]
+{
+    width: 500px;
+    font-size: 1.6em;
+    text-transform: none;
+    
+}
+
+.addingFilmFormContainer input[type=text]:focus
+{
+    background-color: #cfc48e;
+}
+
+
+.addingFilmFormContainer input[type=submit]
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    margin-top: 35px;
+}
+
+.addingFilmFormContainer p
+{
+    text-align: center;
+}

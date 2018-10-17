@@ -1,0 +1,47 @@
+﻿
+                            <h:form id="reservationRegistrationForm">
+
+                               <div class="reservationIntputsUserContainer">
+                                    <p><label for="emailInput">E-mail:</label>
+                                        <h:inputText id="emailInput" value="#{klientBean.email}"/>
+                                    </p>
+                                    <p><label for="passwordInput">Hasło:</label>
+                                        <h:inputSecret id="passwordInput" value="#{klientBean.haslo}"/>
+                                    </p>
+                                    <p><label for="repeatPasswordInput">Potwierdzenie hasła:</label>
+                                        <h:inputSecret id="repeatPasswordInput" 
+                                                       value='#{klientBean.haslo2}' />
+                                    </p>
+                                    <p><label for="fNameInput">Imię:</label>
+                                        <h:inputText id="fNameInput"  value="#{klientBean.imie}"/>
+                                    </p>
+                                    <p><label for="nameInput">Nazwisko:</label>
+                                        <h:inputText id="nameInput" value="#{klientBean.nazwisko}"/>
+                                    </p>
+
+                                   <p><h:commandButton actionListener="#{klientBean.addKlientReservation}" action="#{loginBean.loginActionReservation}" 
+                                                        value="Zarejestruj" />
+                                   </p>
+           
+                                </div>
+                                <h:messages infoStyle="color:green" layout="table" />
+                            </h:form>
+                             
+                            
+                            <h:form id="reservationClientData">
+                                <p><h:inputText id="imieRes" value="#{rezerwacjeBean.klientId.imie}" class="reservationFName"/> </p>
+                                <p><h:inputText id="nazwiskoRes" value="#{rezerwacjeBean.klientId.nazwisko}" class="reservationFName"/> </p>
+                                <p><h:inputText id="emailRes" value="#{rezerwacjeBean.klientId.email}" class="reservationFName"/> </p>
+                                <p><h:commandButton action="#{rezerwacjeBean.goNextStep}" value="Dalej" /></p>
+                                
+                            </h:form>
+
+
+
+<h:form id="reservationLoginForm" class="reservationLoginForm">
+                                <div class="reservationIntputsUserContainer">
+                                    <p><h:inputText value="#{loginBean.email}" id="logEmail" class="reservationFName" /></p>
+                                    <p><h:inputSecret value="#{loginBean.haslo}" id="logPasword" class="reservationFName" /></p>
+                                    <p><h:commandButton value="Zaloguj" action="#{loginBean.loginActionReservation}" /></p>
+                                </div>
+                            </h:form>

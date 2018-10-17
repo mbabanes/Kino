@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="css/default.css"/>
+        <h:outputStylesheet name="css/cssLayout.css"/>
+        <h:outputStylesheet name="fontello/css/fontello.css"/>
+        <ui:insert name="css" />
+        <title>Kino</title>
+        
+        <h:outputScript name="/js/jquery-1.12.4.min.js" target="head" />
+        
+          
+         
+    </h:head>
+
+    <h:body>
+
+        <header id="top" class="top">
+            <hgroup>
+                <h1>PaGrOr - Sinema<i class="demo-icon icon-videocam"></i></h1>
+                <h2><ui:insert name="top"></ui:insert></h2>
+            </hgroup>    
+            
+
+        </header>
+        
+        <ui:insert name="loginButton">
+            <h:panelGroup layout="block" class="loginButtonBox" rendered="#{not loginBean.currentKlient.login}">
+                <a href="logowanie.xhtml">Zaloguj się</a>
+            </h:panelGroup>
+            
+            <h:panelGroup layout="block" class="currnetClientBox" rendered="#{loginBean.currentKlient.login}">
+                <span class="currentClient">#{loginBean.currentKlient.klient.email}</span>
+                <h:form>
+                    <h:commandLink action="#{loginBean.logoutAction}" value="Wyloguj" />
+                </h:form>
+            </h:panelGroup>
+        </ui:insert>
+        
+       
+            
+        
+
+        <div id="navigation">
+             <ui:insert name="navigation">
+                <nav class="navigation">
+                    <ol>
+                        <li><a href="repertuar.xhtml">Repertuar</a></li>
+                        <li><a href="#">Cennik</a></li>
+                        <li><a href="okinie.xhtml">O kinie</a></li>
+                        <li>
+                            <h:form>
+                                <h:selectOneMenu id="city" class="chooseCity" onchange="this.form.submit()" value="#{lokalizacjaBean.lokalizacja}" >                                                                 
+                                    <f:converter converterId="lokalizacjaConverter" />
+                                    <f:selectItems value="#{lokalizacjaBean.lista}"
+                                                  var="lokalizacja"
+                                                  itemValue="#{lokalizacja}"
+                                                  itemLabel="#{lokalizacja.miasto}"         
+                                                  />                         
+                                </h:selectOneMenu>
+                            </h:form>
+                        </li>
+                    </ol>
+                </nav>
+            </ui:insert>
+        </div>
+        
+        <div id="reser">
+            <ui:insert name="reservationSteps"></ui:insert>
+        </div>
+
+        <div id="content" class="center_content">
+            <ui:insert name="content"></ui:insert>
+        </div>
+
+        <footer id="footer">
+            
+            <p>Wszystkie prawa zastrzeżone 2016 &copy;</p>
+           
+            
+            <ui:insert name="footer"></ui:insert>
+            
+            <div class="socialWebs">
+                <a href="#" class="socialLinks">
+                    <div class="socialButtons socialFbButton">
+                        <i class="demo-icon icon-facebook"></i>
+                    </div>
+                </a>
+                <a href="#" class="socialLinks">
+                    <div class="socialButtons socialTwButton">
+                        <i class="demo-icon icon-twitter"></i>
+                    </div>
+                </a>
+                <a href="#" class="socialLinks">
+                    <div class="socialButtons socialGpButton">
+                        <i class="demo-icon icon-gplus"></i>
+                    </div>
+                </a>
+                <a href="#" class="socialLinks">
+                    <div class="socialButtons socialYtButton">
+                        <i class="demo-icon icon-youtube"></i>
+                    </div>
+                </a>
+                <div class="clearboth"></div>
+            </div>
+        </footer>
+
+    </h:body>
+
+</html>

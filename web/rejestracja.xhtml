@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="szablon.xhtml">
+
+            <ui:define name="top">
+                
+            </ui:define>
+            
+         
+            
+            <ui:define name="navigation"></ui:define>
+
+            <ui:define name="content">
+                <div class="loginContainer">
+                    <h2>Rejestracja</h2>
+                    <h:form id="loginForm">
+                        <p><label for="emailInput">E-mail:</label>
+                            <h:inputText id="emailInput" value="#{klientBean.email}"/>
+                        </p>
+                        <p><label for="passwordInput">Hasło:</label>
+                            <h:inputSecret id="passwordInput" value="#{klientBean.haslo}"/>
+                        </p>
+                        <p><label for="repeatPasswordInput">Potwierdzenie hasła:</label>
+                            <h:inputSecret id="repeatPasswordInput" 
+                                           value='#{klientBean.haslo2}' />
+                        </p>
+                        <p><label for="fNameInput">Imię:</label>
+                            <h:inputText id="fNameInput"  value="#{klientBean.imie}"/>
+                        </p>
+                        <p><label for="nameInput">Nazwisko:</label>
+                            <h:inputText id="nameInput" value="#{klientBean.nazwisko}"/>
+                        </p>
+                        
+                        <p><h:commandButton action="#{klientBean.addKlient}" 
+                                            value="Zarejestruj" />
+                        </p>
+                    </h:form>
+                    
+                     <h:messages infoStyle="color:green" layout="table" />
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

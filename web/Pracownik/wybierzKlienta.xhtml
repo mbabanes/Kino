@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../szablon.xhtml">
+
+            <ui:define name="top">
+                #Kielce
+            </ui:define>
+            
+            <ui:define name="loginButton"><div class="loginButtonBox">
+            <a href="/logowanie.xhtml">Zaloguj się</a>
+            </div></ui:define>
+            
+            <ui:define name="navigation">
+                
+            </ui:define>
+            
+            <ui:define name="reservationSteps">
+              <h:outputScript name="/js/wstawEmail.js" target="head" />
+            </ui:define>
+            <ui:define name="content">
+               
+                <section class="reservationContainer">
+                    <h2>Wystaw bilet - wybór klienta</h2>
+                    <h3>Kapitan Ameryka: wojna bohaterów  &#8260; napisy  &#8260;  3D</h3>
+                    <p>Czwartek 10.10.2016 godz. 10:00</p>
+                    <form id="reservationPlaceForm" action="podsumowanie.xhtml">
+                    <div class="reservationPlaceFormContainer">
+                        
+                            <span class="countTicket">Ilość: 2</span>
+                            <span class="countTicket">Wartość: 20,00 zł</span>
+                            <div class="reservationIntputsContainer">
+                                <p><label for="rowInput">Rząd:</label><input type="text" readonly="readonly" value="A" id="rowInput" /></p>
+                                <p><label for="placeInRowInput">Miejsce:</label><input type="text" readonly="readonly" value="1" id="placeInRowInput"/></p>
+                            </div>
+                    </div>    
+                            
+                    <div class="reservationPlaceFormContainer">    
+                           <div class="reservationIntputsUserContainer">
+                               <p><input type="checkbox" name="czyKonto" value="tak" id="czyKonto"/>Bilet na konto?</p>
+                                <p><input type="text" placeholder="e-mail"  id="reservationEmail" /></p>
+                            </div>
+                            
+                            
+                            
+                            <div class="buttonsReservationContainer">
+                                <input type="submit" value="Powrót" id="previousButton" />
+                                <input type="submit" value="Dalej" id="nextButton" />
+                                <div class="clearboth"></div>
+                            </div>
+                        
+                    </div> 
+                    </form>
+                </section>
+                      
+            </ui:define>
+
+            
+            
+            
+            
+            
+        </ui:composition>
+
+    </body>
+</html>

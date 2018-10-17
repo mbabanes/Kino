@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="szablon.xhtml">
+
+            <ui:define name="top">
+                ##{lokalizacjaBean.lokalizacja.miasto}
+                #{seansBean.setLokalizacja( lokalizacjaBean.lokalizacja )}
+            </ui:define>
+            
+           
+            
+            <ui:define name="content">
+                <sction class="today">
+                    <h2>Repertuar - #{seansBean.currentDayToShow}</h2>
+                    <div class="daysIconsContainer">
+                        <h:form>
+                            <ui:repeat value="#{seansBean.dni}" var="dzien">
+                                <div class="dayIcon">
+                                    <h:commandLink action="#{seansBean.showSeanseForDay( dzien )}" 
+                                                   value="#{dzien.dateToShow}" 
+                                    />
+                                </div>
+                            </ui:repeat>
+                        </h:form>
+                        
+                    </div>
+                     <div class="repertoireContainer">
+                        <table class="repertoireDataTable">
+                            <thead class="repertoireDataTableHeader">
+                                <th  class="repertoireDataTableMovieTitle">Filmy</th><th>Gatunek</th><th>do południa</th>
+                                <th>po południu</th><th>wieczorem</th>
+                            </thead>
+                            
+                            <tbody class="repertoireDataTableBody">
+                                <h:form>
+                                <ui:repeat value="#{seansBean.filmsSeansList}" var="seans">
+                                    <tr>
+                                        <td>#{seans.tytulFilmu}</td>
+                                        <td>
+                                            <ui:repeat value="#{seans.wszystkList}" var="wszyst">
+                                                #{wszyst.godzina}
+                                            </ui:repeat> 
+                                        </td>
+                                            <td> 
+                                                <ui:repeat value="#{seans.godzDoPoludniaList}" var="godz">
+                                                    <h:commandLink action="#{rezerwacjeBean.przejdzDoWyboruMiejsc(godz.idSeans, seans.tytulFilmu, godz.godzina)}" 
+                                                                   value="#{godz.godzina}" />
+                                                   
+                                                </ui:repeat>
+                                            </td>
+                                        <td>
+                                            <ui:repeat value="#{seans.godzPoPoludniuList}" var="godz">
+                                                #{godz.godzina}
+                                            </ui:repeat>
+                                        </td>
+                                        <td>
+                                            <ui:repeat value="#{seans.godzWieczoremList}" var="godz">
+                                                #{godz.godzina}
+                                            </ui:repeat>
+                                        </td>
+
+                                    </tr>
+                                </ui:repeat> 
+                                </h:form>
+                            </tbody>
+                        </table>
+                        <p><i class="demo-icon icon-info-circled-alt"></i> Aby kupić lub zarezerwować bilet - kliknij w wybraną godzinę.</p>
+                        
+                    </div>
+                    <p>Cos tam: #{seansBean.cosTam}</p>
+                    <p>Cos tam: #{seansBean.currentDay}</p>
+                </sction>
+            </ui:define>
+
+            <ui:define name="footer">
+                
+            </ui:define>
+
+            
+        </ui:composition>
+
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    
+    <managed-bean>
+        <managed-bean-name>lokalizacjaBean</managed-bean-name>
+        <managed-bean-class>controllers.LokalizacjaBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <converter>
+        <converter-id>lokalizacjaConverter</converter-id>
+        <converter-class>config.LokalizacjaConverter</converter-class>
+    </converter>
+    
+    <managed-bean>
+        <managed-bean-name>klientBean</managed-bean-name>
+        <managed-bean-class>controllers.KlientBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+     <managed-bean>
+        <managed-bean-name>loginBean</managed-bean-name>
+        <managed-bean-class>controllers.LoginBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+     <managed-bean>
+        <managed-bean-name>seansBean</managed-bean-name>
+        <managed-bean-class>controllers.SeanseBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    
+     <managed-bean>
+        <managed-bean-name>currentKlient</managed-bean-name>
+        <managed-bean-class>controllers.CurrentKlient</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+   <managed-bean>
+        <managed-bean-name>rezerwacjeBean</managed-bean-name>
+        <managed-bean-class>controllers.RezerwacjeBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        
+    </managed-bean>
+    
+     <managed-bean>
+        <managed-bean-name>wybranySeansBean</managed-bean-name>
+        <managed-bean-class>controllers.WybranySeansBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>biletBean</managed-bean-name>
+        <managed-bean-class>controllers.BiletBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        
+    </managed-bean>
+    
+    
+    <managed-bean>
+        <managed-bean-name>filmBean</managed-bean-name>
+        <managed-bean-class>controllers.pracownik.FilmBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+</faces-config>
